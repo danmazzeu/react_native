@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, ScrollView } from 'react-native';
-import Login from './src/login';
+import Login from './src/views/login';
 
 export default function App() {
   return (

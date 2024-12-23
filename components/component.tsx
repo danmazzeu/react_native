@@ -1,6 +1,5 @@
 import React from 'react';
 import { TextInput, StyleSheet, View } from 'react-native';
-import CustomError from './customError';
 import CustomTypography from './customTypography';
 
 interface CustomInputProps {
@@ -9,7 +8,6 @@ interface CustomInputProps {
     value?: string;
     onChangeText?: (text: string) => void;
     placeholder: string;
-    error?: string;
     secureTextEntry?: boolean;
 }
 
@@ -18,14 +16,13 @@ const CustomInput = ({
     details, 
     value, 
     onChangeText, 
-    placeholder, 
-    error, 
+    placeholder,  
     secureTextEntry = false
 }: CustomInputProps) => {
     return (
         <View style={styles.view}> 
-            {label && <CustomTypography text={label} tag='h2' />} 
-            {details && <CustomTypography text={details} tag='small' />} 
+            {label && <CustomTypography text={label} tag="h2" />} 
+            {details && <CustomTypography text={details} tag="small" />} 
             <TextInput 
                 value={value} 
                 onChangeText={onChangeText} 
@@ -33,7 +30,6 @@ const CustomInput = ({
                 style={[styles.input]} 
                 secureTextEntry={secureTextEntry} 
             />
-            {error && <CustomError text={error} />}
         </View>
     );
 };
@@ -50,7 +46,7 @@ const styles = StyleSheet.create({
         borderColor: "#ccc",
         borderStyle: "solid",
         borderRadius: 10,
-        backgroundColor: '#fff'
+        backgroundColor: "#fff"
     }
 });
 
