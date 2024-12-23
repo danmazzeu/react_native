@@ -9,6 +9,8 @@ import CustomError from './src/components/customError';
 import CustomSelect from './src/components/customSelect';
 import CustomTextarea from './src/components/customTextarea';
 
+// teste
+
 export default function App() {
   return (
     <SafeAreaView>
